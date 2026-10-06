@@ -19,7 +19,7 @@
     --success: light-dark(#15803d, #64d48f);
     --success-bg: light-dark(#ecfdf3, #143522);
     --danger: light-dark(#dc2626, #ff7f87);
-    --danger-bg: light-dark(#3b171b, #35171d);
+    --danger-bg: light-dark(#fef2f2, #35171d);
     --warning: light-dark(#b45309, #f7bb57);
     --shadow: 0 18px 50px rgba(21, 32, 51, 0.08);
   }
@@ -110,7 +110,7 @@
   .option:hover { border-color:var(--accent); background:var(--accent-2); }
   .option.selected { border-color:var(--accent); background:var(--accent-2); }
   .option.correct { border-color:var(--success); background:var(--success-bg); }
-  .option.wrong { border-color:var(--danger); background:var(--danger-bg); }
+  .option.wrong {border-color: var(--danger); background: var(--danger-bg); color: var(--danger); }
   .option-key { width:28px; height:28px; border-radius:9px; display:grid; place-items:center; flex:0 0 28px; background:var(--surface-2); font-weight:900; color:var(--muted); }
   .option.selected .option-key { background:var(--accent); color:#fff; }
   .option.correct .option-key { background:var(--success); color:#fff; }
