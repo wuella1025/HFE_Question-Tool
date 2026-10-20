@@ -345,7 +345,8 @@ function renderQuiz() {
     if(!submitted && selected===key) cls+=" selected";
     if(submitted && key===q.answer) cls+=" correct";
     if(submitted && selected===key && key!==q.answer) cls+=" wrong";
-    return `<button class="${cls}" ${submitted?"disabled":""} onclick='selectOption("${key}")'><span class="option-key">${key}</span><span class="option-text">${escapeHtml(opt)}</span></button>`;
+    const cleanOpt = opt.replace(/^[A-D]\.\s*/, "");
+    return `<button class="${cls}" ${submitted?"disabled":""} onclick='selectOption("${key}")'><span class="option-key">${key}</span><span class="option-text">${escapeHtml(cleanOpt)}</span></button>`;
   }).join("");
   const feedback=submitted ? `<div class="feedback"><strong>${selected===q.answer?"答對了！":`答錯了，正確答案是 ${q.answer}`}</strong><p>${escapeHtml(q.explanation)}</p></div>` : "";
   document.getElementById("view").innerHTML=`
